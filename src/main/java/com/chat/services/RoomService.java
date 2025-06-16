@@ -1,0 +1,4 @@
+package com.chat.services;
+
+public interface RoomService {
+}
