@@ -12,11 +12,11 @@ import java.util.List;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Document(collation = "rooms")
+@Document(collection = "rooms")
 public class Room {
     @Id
     private String id; //monog ko unique id auto create
     private String roomId; //user created
-    private List<Message> messages= new ArrayList<>();
+    private List<Message> messages=new ArrayList<>();
 
 }

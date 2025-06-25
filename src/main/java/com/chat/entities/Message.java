@@ -7,16 +7,21 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
-@Data@AllArgsConstructor @NoArgsConstructor
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Document
 public class Message {
     private String sender;
     private String content;
+
+    private String roomId;
     private LocalDateTime timeStamp;
 
-    public  Message(String sender, String content){
+    public  Message(String sender,String roomId, String content){
         this.content=content;
         this.sender=sender;
+        this.roomId=getRoomId();
         this.timeStamp=LocalDateTime.now();
     }
 }
